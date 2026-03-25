@@ -30,7 +30,7 @@ The tasks are stored temporarily in the browser's memory and will be lost when t
 
 ## ▶ Live Demo
 
-You can see the live demo right here 👉 [Demo]
+You can see the live demo right here 👉 [Demo](https://marvelttihu.github.io/simple-to-do-list/)
 
 ## 📝 Notes
 
