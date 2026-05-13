@@ -26,4 +26,4 @@ Tasks are stored in memory only and will reset on page refresh.
 
 ## Live Demo
 
-[View Demo](https://marvelttihu.github.io/simple-to-do-list/)
+[View Demo](https://marvelttihu.github.io/To-DoList/)
