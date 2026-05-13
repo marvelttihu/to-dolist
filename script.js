@@ -1,43 +1,44 @@
+// Get DOM elements
 const inputTask = document.getElementById('text');
 const addTask = document.getElementById('add');
 const taskList = document.getElementById('task-list');
 const warningText = document.getElementById('warning');
 
-// Add task button event handling
+// Add Task
 addTask.addEventListener("click", () => {
     warningText.innerText = "";
     if (inputTask.value.trim() !== '') {
         const task = document.createElement('li');
-        task.textContent = inputTask.value;
 
+        // Set task content
         task.innerHTML = `
-            <label class="checkbox-wrapper">
-                <input type="checkbox" class="task-checkbox">
-                <span class="custom-box"></span>
-                <span class="task-text">${inputTask.value}</span>
-            </label>
+            <span class="task-text">${inputTask.value}</span>
         `;
 
-        // Delete task button
+        // delete task button
         const deleteTask = document.createElement('button');
-        deleteTask.textContent = 'Delete';
-        deleteTask.addEventListener('click', () => {
+        deleteTask.innerHTML = '✕';
+        deleteTask.addEventListener('click', (e) => {
+            e.stopPropagation();
             task.remove();
         });
-        
+
+        // Toggle task completion
+        task.addEventListener('click', () => {
+            task.querySelector('.task-text').classList.toggle('done');
+        });
+
         task.appendChild(deleteTask);
         taskList.appendChild(task);
         inputTask.value = '';
     } else {
-        // Warning-text
         warningText.innerText = "Error: Please enter a task.";
     }
 });
 
-// This is for enter button
-inputTask.addEventListener('keydown', (event) => {  
-    if(event.key === "Enter") {
+// Allow adding task with Enter key
+inputTask.addEventListener('keydown', (event) => {
+    if (event.key === "Enter") {
         addTask.click();
     }
-}) 
-
+});

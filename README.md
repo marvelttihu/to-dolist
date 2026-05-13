@@ -1,17 +1,15 @@
 # To-do List
 
-A simple to-do list app to help you manage tasks and daily routines with a clean, minimal interface.
+A cool to-do list app to help you manage tasks and daily routines with a clean interface and background.
 
 ## Features
 
 - Add and delete tasks
-- Mark tasks as done with a custom checkbox
+- Mark tasks as done by simply touching the task
 - Responsive design across screen sizes
 - Smooth hover and transition effects
 
 ## How It Works
-
-Built with vanilla HTML, CSS, and JavaScript. No frameworks, no dependencies.
 
 1. Type a task in the input field
 2. Click "Add" or press Enter to add it to the list
